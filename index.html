@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Plans — what a government plan gives you, and what it doesn't</title>
+  <meta name="description" content="Government schemes explained in very simple words: the good parts, the problems, who can get it, and how to apply. English and Hindi.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b2430'/%3E%3Cpath d='M9 9h7v14H9z' fill='%23fff'/%3E%3Cpath d='M18 9h6v8h-6z' fill='%23e0b04a'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="top">
+    <div class="top-row">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">◧</span>
+        <span data-i18n="brand">Simple Plans</span>
+      </a>
+      <nav class="util">
+        <a class="util-link" href="find.html" data-i18n="navFind">Find plans for me</a>
+        <button id="lang-toggle" class="lang-btn" type="button" data-i18n="langSwitch">हिंदी में पढ़ें</button>
+      </nav>
+    </div>
+    <p class="tagline" data-i18n="tagline">Government plans, in words anyone can understand.</p>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1 data-i18n-html="heroTitle">What does this plan <em>actually</em> do for you?</h1>
+      <p class="lede" data-i18n="lede">
+        Every government plan has two sides. The help it gives, and the problems it has.
+        Here we write both, in plain words, with no political side.
+      </p>
+      <div class="promise">
+        <div data-i18n-html="promise1"><strong>Short sentences.</strong> No big words.</div>
+        <div data-i18n-html="promise2"><strong>Both sides.</strong> Good and not-so-good, together.</div>
+        <div data-i18n-html="promise3"><strong>Official links.</strong> So you can check yourself.</div>
+      </div>
+    </section>
+
+    <a class="finder-banner" href="find.html">
+      <span class="finder-emoji" aria-hidden="true">🧭</span>
+      <span>
+        <strong data-i18n="finderCtaTitle">Not sure where to start?</strong>
+        <span class="finder-text" data-i18n="finderCtaText">Answer 6 small questions. We will show the plans that may fit your family.</span>
+      </span>
+    </a>
+
+    <section class="search-wrap">
+      <label class="sr-only" for="search">Search a plan</label>
+      <input id="search" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Search a plan… (try 'farmer' or 'health')" autocomplete="off">
+      <p id="search-note" class="search-note" hidden></p>
+    </section>
+
+    <section id="plan-list" class="cards" aria-live="polite"></section>
+
+    <section class="how-to-read">
+      <h2 data-i18n="howReadTitle">How to read a plan page</h2>
+      <div class="read-grid">
+        <div class="read-item">
+          <span class="pill good" data-i18n="readGoodTitle">Good things</span>
+          <p data-i18n="readGoodText">What the plan really does well. The part that helps you.</p>
+        </div>
+        <div class="read-item">
+          <span class="pill bad" data-i18n="readBadTitle">Not-so-good things</span>
+          <p data-i18n="readBadText">The problems, limits and extra costs. Every plan has some.</p>
+        </div>
+        <div class="read-item">
+          <span class="pill plain" data-i18n="readWhoTitle">Who gets it</span>
+          <p data-i18n="readWhoText">So you can quickly see if it is meant for you at all.</p>
+        </div>
+        <div class="read-item">
+          <span class="pill plain" data-i18n="readHowTitle">How to apply</span>
+          <p data-i18n="readHowText">Steps in order. What papers to carry. What to avoid.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <p class="disclaimer" data-i18n-html="disclaimer">
+      <strong>Please read.</strong> This site is not run by the government. It is a simple
+      explainer. Rules and money amounts change. Always check the official website before
+      you act, and never pay a middleman for something that is free.
+    </p>
+    <p class="tiny"><span data-i18n="lastCheckedLabel">Last checked:</span> <span class="js-checked">November 2026</span></p>
+  </footer>
+
+  <script src="js/ui.js"></script>
+  <script src="js/plans.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
