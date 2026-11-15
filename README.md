@@ -1,5 +1,7 @@
 # Simple Plans / आसान योजनाएँ
 
+**Live site:** <https://simplle-plans-india.netlify.app>
+
 A small website that explains government plans in very simple English **and simple
 Hindi**. For each plan it shows four things:
 
