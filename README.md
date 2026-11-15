@@ -153,24 +153,27 @@ again after every change, before you re-upload.
 
 ### GitHub Pages
 
-The folder is already a git repository with one commit. To put it on GitHub:
+The code is already on GitHub: <https://github.com/SomeDude-420/government-plans-site>
+(public, branch `main`).
 
-1. Create a free account at <https://github.com> and click **New repository**.
-   Name it `government-plans-site`, keep it **Public**, do not add a README.
-2. In a terminal in this folder, run these lines one by one (replace `YOURNAME`):
+To save future changes:
 
 ```
-git remote add origin https://github.com/YOURNAME/government-plans-site.git
-git branch -M main
-git push -u origin main
+git add -A
+git commit -m "what you changed"
+git push
 ```
 
-3. On GitHub: **Settings → Pages → Branch: main → Save**.
-4. After a minute your site is at `https://YOURNAME.github.io/government-plans-site/`.
+To also serve the site from GitHub (optional, next to Netlify):
 
-Note: GitHub Pages serves the whole repository, not just `site`. That works
-because `index.html` sits in the main folder. The extra files are harmless but
-public.
+1. Open the repository → **Settings → Pages**.
+2. Under **Source**, choose **Deploy from a branch**.
+3. Branch: `main`, folder: `/ (root)` → **Save**.
+4. After a minute it is at `https://somedude-420.github.io/government-plans-site/`.
+
+GitHub Pages serves the repository root, not the `site` folder, so no build step is
+needed there. The `site` folder is ignored by git on purpose — it is only for
+Netlify uploads.
 
 ---
 
