@@ -128,13 +128,26 @@ dev-server.py         Local server with live reload (not part of the site)
 
 You need an account for these, so it is a two-minute job on your side.
 
+### Step 0: make the upload folder
+
+The working folder has extra files (dev server, git history, notes). Build a clean
+copy for the web:
+
+```
+python3 make-site.py
+```
+
+This creates a folder called `site` with only the 8 files a website needs. Run it
+again after every change, before you re-upload.
+
 ### Easiest: Netlify Drop
 
 1. Go to <https://app.netlify.com/drop> and sign up (free, can use Google).
-2. Drag this whole folder onto the page.
-3. You get a web address like `https://your-name.netlify.app`.
-4. To update later, drag the folder again. Or connect it to GitHub so it updates
-   by itself.
+2. Drag the **`site`** folder onto the page.
+3. You get a web address like `https://random-name-123.netlify.app`.
+4. To rename it: **Site configuration → Change site name**.
+5. To update later: open your site → **Deploys** → drag the `site` folder there
+   again. (Run `make-site.py` first so it has the newest files.)
 
 ### GitHub Pages
 
@@ -152,6 +165,10 @@ git push -u origin main
 
 3. On GitHub: **Settings → Pages → Branch: main → Save**.
 4. After a minute your site is at `https://YOURNAME.github.io/government-plans-site/`.
+
+Note: GitHub Pages serves the whole repository, not just `site`. That works
+because `index.html` sits in the main folder. The extra files are harmless but
+public.
 
 ---
 
